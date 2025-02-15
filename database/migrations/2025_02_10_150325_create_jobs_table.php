@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('salary');
             $table->foreignId('employer_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

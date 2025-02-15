@@ -10,14 +10,13 @@ class Job extends Model
     /** @use HasFactory<\Database\Factories\JobFactory> */
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'description',
-        'salary',
-    ];
+    protected $guarded = [];
 
     public function employer(){
         return $this->belongsTo(Employer::class);
+    }
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
     }
 
 }

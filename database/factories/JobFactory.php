@@ -20,7 +20,8 @@ class JobFactory extends Factory
                 'title' => fake()->jobTitle(),
                 'description' => fake()->paragraph(),
                 'salary' => '75,000 USD',
-                'employer_id' => fake()->randomDigitNotZero()
+                'employer_id' => fake()->randomDigitNotZero(),
+                'user_id' => fake()->randomDigitNotZero()
         ];
     }
 }
